@@ -1,6 +1,8 @@
 
 # Introduction to R workshop
 
+Thursday, April 15, 2021
+
 <!-- badges: start -->
 <!-- badges: end -->
 
