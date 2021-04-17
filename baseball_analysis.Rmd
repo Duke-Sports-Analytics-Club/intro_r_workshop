@@ -1,0 +1,213 @@
+---
+title: "Exploring R"
+author: "Shawn Santo"
+date: "4/14/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+## Packages
+
+```{r}
+library(tidyverse)
+library(Lahman)
+```
+
+## Introduction (a quick primer)
+
+### Vectors
+
+A vector is the basic building block in R.
+
+```{r}
+c(4, 1, 0)
+c("intro", "to", "r")
+c(pi, 5 / 2, 6 * 4, -3)
+```
+
+The four main vector types you will work with are `logical`, `integer`,
+`double`, and `character`.
+
+Some vector properties:
+
+1. Each element of a vector must be the same type, check the type with 
+   `typeof()`
+
+2. Vector indexing begins at 1, not 0
+
+3. Vectors can be subset by position
+
+### Data frames (tibbles)
+
+A data frame (or tibble) is a rectangular structure in R where each column is
+a vector. It is a very common structure to work with in doing data wrangling
+and visualization.
+
+```{r}
+mtcars
+```
+
+```{r}
+storms
+```
+
+A tibble is a nicer form of a data frame, so generally we will coerce data
+frames to tibbles with `as_tibble()`.
+
+### Object creation
+
+Objects can be created with `<-` or `=`. However, using the assignment operator,
+`<-` is considered best practice.
+
+```{r}
+a <- 10 ^ 4
+b <- sqrt(pi)
+
+total <- sum(c(4, 5, 0, 10))
+coin_tosses <- sample(c("H", "T"), size = 12, replace = TRUE)
+```
+
+```{r}
+a
+b
+total
+coin_tosses
+```
+
+## Data wrangling
+
+The `dplyr` package is a package in `tidyverse` that is great for data
+wrangling data frame objects. 
+
+We'll work with some baseball data from the `Lahmen` package.
+
+```{r}
+teams <- as_tibble(Teams)
+```
+
+Take a `glimpse()` at `teams`.
+
+```{r}
+glimpse(teams)
+```
+
+To do further manipulations we need to introduce the pipe operator - `%>%`.
+This operator takes the object on the left-hand-side and passes it into
+the object on the right-hand-side. Rather than write `f(x, y)` one could
+write `x %>% f(y)`.
+
+### Select
+
+Let's `select()` the runs, runs allowed, wins, year, and team name.
+
+```{r}
+teams %>% 
+  select(R, RA, W, yearID, name)
+```
+
+`select()` allows you to choose variables (columns). Separate your choices with 
+a comma.
+
+### Filter
+
+Let's `filter()` `teams` for those years since 1970.
+
+```{r}
+teams %>% 
+  filter(yearID >= 1970)
+```
+
+`filter()` chooses rows based on conditions of variables.
+
+### Arrange
+
+Let's `arrange()` `teams` in descending order by wins.
+
+```{r}
+teams %>% 
+  arrange(desc(W))
+```
+
+The default sorting with `arrange()` is ascending.
+
+### Mutate
+
+Let's create a new variable in `teams` called win percentage.
+
+```{r}
+teams %>% 
+  mutate(win_pct = W / G)
+```
+
+`mutate()` allows you to create new variables in your data frame.
+
+### Example
+
+We can combine many of these steps together. Consider the example below.
+
+```{r}
+teams %>% 
+  select(yearID, name, W, G) %>% 
+  mutate(win_pct = W / G) %>% 
+  arrange(desc(win_pct)) %>% 
+  filter(G == 162)
+```
+
+## Data visualization
+
+The `ggplot2` package is a package in `tidyverse` that is great for data
+wrangling data frame objects. 
+
+### Basics
+
+Every `ggplot` object starts with a call to function `ggplot()`.
+
+```{r}
+ggplot()
+```
+
+Add some data and variables you want to map to aesthetics.
+
+```{r}
+ggplot(data = teams, aes(x = R, y = W))
+```
+
+Add a geometry. In this case we'll use `geom_point()` to create a 
+scatterplot.
+
+```{r}
+ggplot(data = teams, aes(x = R, y = W)) +
+  geom_point()
+```
+
+Finally, add some labels and a theme.
+
+```{r}
+ggplot(data = teams, aes(x = R, y = W)) +
+  geom_point() +
+  labs(x = "Runs scored", y = "Wins", title = "More runs means more wins!") +
+  theme_minimal()
+```
+
+With `ggplot`, the plus operator, `+`, has a special meaning. It links together
+the `ggplot2` functions to build your visualization.
+
+## Pythagorean wins
+
+Let's put together everything we know and create a scatterplot showing the
+Pythagorean wins versus a team's win percentage for all teams since 2000.
+
+```{r}
+teams %>% 
+  filter(yearID >= 2000) %>% 
+  ggplot(aes(x = R ^ 2 / (R ^ 2 + RA ^ 2), y = W / G)) +
+  geom_point(color = "blue") +
+  geom_abline(intercept = 0, color = "red") +
+  labs(x = "Pythagorean Wins", y = "Win percentage",
+       title = "Teams above the line exceeded their Pythagorean wins") +
+  theme_minimal(base_size = 14)
+```
+
