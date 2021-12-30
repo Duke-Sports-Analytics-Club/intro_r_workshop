@@ -16,7 +16,7 @@ library(tidyverse)
 library(Lahman)
 ```
 
-## Introduction (a quick primer on RStudio)
+## Introduction (a quick primer on RStudio hooray)
 
 ### Vectors
 
