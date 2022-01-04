@@ -11,6 +11,28 @@ through the use of baseball data from package `Lahman`.
 
 ## Getting started
 
+
+Downloading R, git, and RStudio
+
+R: 
+Choose link under 0-cloud, then choose appropriate install based on computer. 
+https://cran.r-project.org/mirrors.html 
+
+Github: 
+Create an account if you do not have one.
+https://github.com/ 
+
+Git: 
+Download git using instructions here
+https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/setting-up-git
+
+RStudio: 
+Download RStudio Desktop
+https://www.rstudio.com/products/rstudio/download/
+
+
+If you want to work in the Docter containers
+
 To bring these files into an RStudio session follow the steps below.
 
 1. Click on the green Code button in this repository, and copy the git URL
