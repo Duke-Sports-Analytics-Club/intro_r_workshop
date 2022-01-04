@@ -30,7 +30,7 @@ Download RStudio Desktop
 https://www.rstudio.com/products/rstudio/download/
 
 
-#If you want to work in the Docter containers
+# If you want to work in the Docter containers
 
 To bring these files into an RStudio session follow the steps below.
 
