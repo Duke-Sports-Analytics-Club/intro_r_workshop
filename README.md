@@ -48,7 +48,7 @@ To bring these files into an RStudio session follow the steps below.
 5. Click Create Project, and the files from your GitHub repo will be displayed
    in the Files pane in RStudio.
 
-6. Click baseball_analysis.Rmd to open the R Markdown file.
+6. Click class.Rmd to open the R Markdown file.
 
 ## Packages
 
