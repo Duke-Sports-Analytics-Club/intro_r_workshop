@@ -85,6 +85,14 @@ If you are running into trouble with anything, especially the git stuff, first g
 
 ## Troubleshooting/Debugging
 
+If you find you are missing a package, install it with the below code.
+
+```r
+install.packages("package_name")
+```
+
+Be sure to spell the package correctly and put it in quotes.
+
 
 tinytex::install_tinytex() might help if you are running into issues on knitting
 
