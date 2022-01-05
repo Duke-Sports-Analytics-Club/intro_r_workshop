@@ -75,6 +75,8 @@ Be sure to spell the package correctly and put it in quotes.
 Want to further your understanding of some of the functions used in the
 analysis? Check out the resources folder of the repository. 
 
+Want to learn on your own? See this document for a recommended learning pathway. 
+https://docs.google.com/document/d/1fWET_GreI5qO2E-DDDojsmlfNeoQgZaCji-4D5M3PmA/edit#
 
 
 The below books are also great resources. R Cookbook is for beginners, while
