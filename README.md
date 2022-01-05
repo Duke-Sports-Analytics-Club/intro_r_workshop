@@ -5,8 +5,10 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of the workshop is to introduce some basics of R, data wrangling
-with `dplyr`, and data visualization with `ggplot2`. All of this is done
+## Goals
+
+The goal of the workshop is to introduce git, RStudio, and some basics of R. If we have time we will also cover
+data wrangling with `dplyr`, and data visualization with `ggplot2`. All of this is done
 through the use of baseball data from package `Lahman`.
 
 ## Getting started
@@ -69,25 +71,13 @@ install.packages("package_name")
 
 Be sure to spell the package correctly and put it in quotes.
 
+## Resources
 Want to further your understanding of some of the functions used in the
-analysis? Check out the below resources on `dplyr` and `ggplot2`.
+analysis? Check out the resources folder of the repository. 
 
-#### `dplyr` resources
+Want to learn on your own? See this document for a recommended learning pathway. 
+https://docs.google.com/document/d/1fWET_GreI5qO2E-DDDojsmlfNeoQgZaCji-4D5M3PmA/edit#
 
-- [Website](https://dplyr.tidyverse.org)
-- [Cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
-
-#### `ggplot2` resources
-
-- [Website](https://ggplot2.tidyverse.org)
-- [Cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf)
-
-## Learn more R?
-
-If you are interested in learning more about R in general, check out
-[swirl](https://swirlstats.com). swirl teaches you R programming and data
-science interactively, at your own pace, and right in the R console! You
-can do this directly in the Duke OIT RStudio Docker Containers.
 
 The below books are also great resources. R Cookbook is for beginners, while
 R for Data Science does require some basic knowledge of R.
