@@ -1,7 +1,7 @@
 ---
-title: "Exploring R"
-author: "Shawn Santo"
-date: "4/14/2021"
+title: "Introduction to Coding in R + Git"
+author: "Sean Li and Ben Thorpe"
+date: "1/25/2022"
 output:
   html_document: default
   pdf_document: default

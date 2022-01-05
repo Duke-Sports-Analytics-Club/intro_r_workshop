@@ -21,7 +21,7 @@ This homework is meant to help you get comfortable working with git and github a
 Complete the exercises below through creating and pushing your own github repository. 
 Once you are done, commit and push one last time to make sure all your changes are tracked. Then fill out the google form below. 
 
-TURN IT IN HERE: 
+TURN IT IN HERE: https://forms.gle/PVqBb7JhaaKnTvAXA
 
 
 ## Exercises
@@ -44,7 +44,7 @@ Now, we are going to clone that new repository. This we have done already before
 
 ## Part 2. Basic R Things
 After you have created your new project, create an RMD file going to >>File>>New File >> R Markdown.
-Choose KNIT output type to be PDF. You can remove the default stuff ("this is an R Markdown...").
+Choose Knit output type to be HTML. You can change this to PDF on your projects if desired. You can remove the default stuff ("this is an R Markdown...").
 
 
 1. Create a new code chunk and name it "loading-in-libraries"
@@ -76,9 +76,17 @@ We will be using the mtcars built-in dataset to do some simple data analysis.
 Finishing up your work, it is important to have proper code documentation. This is especially important in group project scenarios. 
 
 
-1. Comment out 
+1. Make sure code chunks have titles
+2. Knit your .Rmd document 
+3. Select all changed files and hit commit
+4. Push your work to Github
+
+If you are running into trouble with anything, especially the git stuff, first google the issue. Then if you cannot figure it out - DM a VP of Analytics or Sean/Ben.   
+
+## Troubleshooting/Debugging
 
 
+tinytex::install_tinytex() might help if you are running into issues on knitting
 
 
 
