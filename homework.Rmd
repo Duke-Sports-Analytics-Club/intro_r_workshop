@@ -1,0 +1,84 @@
+---
+title: "Creating and Using a Repo"
+author: "R Mini Course - Duke Sports Analytics Club"
+date: "Due before next class: TBD "  
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+
+This homework is meant to help you get comfortable working with git and github and RStudio. It involves many key parts such as creating a repository, practicing good documentation, and committing/pushing your work. 
+
+
+## Homework Instructions
+
+Complete the exercises below through creating and pushing your own github repository. 
+Once you are done, commit and push one last time to make sure all your changes are tracked. Then fill out the google form below. 
+
+TURN IT IN HERE: 
+
+
+## Exercises
+
+## Part 1. Create a new project using Github
+
+We did not cover creating your own repository in class (we only cloned an existing one) so here are some additional instructions on doing that. 
+
+1. Log into Github.com
+2. In the upper right corner, click on the + sign and click new repository
+3. Give your repository a name. "DSAC_HW_Lastname" is an example.
+4. Make sure the repository is public and check the "Add README file" box and create repository
+5. Navigate to your new repository
+
+Now, we are going to clone that new repository. This we have done already before in class. If you did not attend class, you will need to first create an SSH key. Follow the class video located in this repository to see how that is done or view it here: https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/setting-up-git 
+
+6. Click on the green clone button, click on SSH, click copy button on right of url
+7. Open RStudio Desktop, >>File >> New Project >> Version Control 
+8. Paste the link you copied, choose a location for the project on your computer, create project.
+
+## Part 2. Basic R Things
+After you have created your new project, create an RMD file going to >>File>>New File >> R Markdown.
+Choose KNIT output type to be PDF. You can remove the default stuff ("this is an R Markdown...").
+
+
+1. Create a new code chunk and name it "loading-in-libraries"
+2. Load in the tidyverse and dplyr libraries in that chunk
+
+### Vector Stuff
+Answer the following questions using code and functions to show your work, not just your intuition. 
+
+3. Create a vector called 'ages' with the ages of your family members
+
+4. What is the type of the vector? What is the command to cast it into a character vector? 
+
+5. Index the 2nd entry of the vector
+
+
+### Simple Data Analysis
+We will be using the mtcars built-in dataset to do some simple data analysis.
+
+6. How many rows and columns are in the mtcars dataset? (HINT: use the nrow() and ncol() functions)
+
+7. What do the rows represent? What do the columns represent? 
+
+8. Find the mean, median, and standard deviation of mpg
+
+
+
+## Part 3. Documentation and Committing + Pushing Work
+
+Finishing up your work, it is important to have proper code documentation. This is especially important in group project scenarios. 
+
+
+1. Comment out 
+
+
+
+
+

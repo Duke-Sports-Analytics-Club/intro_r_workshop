@@ -19,7 +19,7 @@ library(Lahman)
 library(broom)
 ```
 
-## Introduction (a quick primer on RStudio hooray)
+## Introduction (a quick primer on RStudio)
 
 ### Vectors
 
