@@ -7,25 +7,43 @@ output:
   pdf_document: default
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
+Note: this code chunk is just default setup stuff RStudio does. Don't worry about it (you can keep it)
+
+
+If you have not downloaded R, git and RStudio, please refer to the README.md file in the repository and complete those steps before proceeding. You will only need to do this once. 
 
 ## Packages
 
+Here we load in packages, which is basically a bundle of pre-made code that helps users create things. For example, the tidyverse package contains built-in functions that allow for data visualization and data wrangling. The Lahman package contains baseball data we are working with. 
+
 ```{r}
-library(tidyverse)
-library(Lahman)
-library(broom)
+library(tidyverse) #package for data wrangling + data viz
+library(Lahman) #package with data
 ```
 
-## Introduction (a quick primer on RStudio)
+## Essentials
+
+Code chunks are the sections in gray surrounded by the triple hash marks and r in brackets. They contain code that is run if you click the green arrow on the top right of the code chunk. 
+
+You can insert more code chunks by pressing the green button Insert or pressing option + Command + I. 
+
+Naming code chunks is when you have something next to the r in the brackets of your code chunk. This is essential for documentation. 
+
+Knitting is the process of putting together your R Markdown Document into a format that can be exported. Currently, we have it set to HTML and PDF. You set the format in the output section up in the header of the Rmd. 
+
+Commenting your code can be done by using a #, you will see the text turn green after. This must be done in the code chunk. Text after the # on that line will not be run when you compile. 
+
+## Introduction (a quick primer on R and RStudio)
 
 ### Vectors
 
-A vector is the basic building block in R.
+A vector is the basic building block in R. 
 
-```{r}
+```{r vectors}
 c(4, 1, 0)
 c("intro", "to", "r")
 c(pi, 5 / 2, 6 * 4, -3)
@@ -43,29 +61,64 @@ Some vector properties:
 
 3. Vectors can be subset by position
 
+### Basic Calculations 
+
+Here are some basic functions you can apply to a vector.
+
+mean(x) - mean
+median(x) - median
+sd(x) - standard deviation
+var(x) - variance
+cor(x, y) - correlation 
+cov(x, y) - covariance
+
+
+```{r indexing}
+v <- c(3,5,6,0,9)
+
+
+v[2]
+mean(v)
+summary(v)
+v[1:4] 
+v[c(1,4)]
+v[v>5]
+```
+
+```{r math}
+w <- c(4,23,5,1,3)
+
+v+w
+v*2 + mean(w)
+(w - mean(w)) / sd(w) # z scores
+```
+
+
 ### Data frames (tibbles)
 
 A data frame (or tibble) is a rectangular structure in R where each column is
 a vector. It is a very common structure to work with in doing data wrangling
 and visualization.
 
-```{r}
+`mtcars` is the name of the dataframe/tibble. Simply writing it in a code chunk will display it. 
+```{r cars}
 mtcars
 ```
 
-```{r}
+```{r storms}
 storms
 ```
 
 A tibble is a nicer form of a data frame, so generally we will coerce data
-frames to tibbles with `as_tibble()`.
+frames to tibbles with `as_tibble()`. This is what you usually have to do given raw sports data. 
+
 
 ### Object creation
 
 Objects can be created with `<-` or `=`. However, using the assignment operator,
 `<-` is considered best practice.
 
-```{r}
+```{r objects}
 a <- 10 ^ 4
 b <- sqrt(pi)
 
@@ -73,7 +126,7 @@ total <- sum(c(4, 5, 0, 10))
 coin_tosses <- sample(c("H", "T"), size = 12, replace = TRUE)
 ```
 
-```{r}
+```{r display-objects}
 a
 b
 total
@@ -88,10 +141,14 @@ wrangling data frame objects.
 We'll work with some baseball data from the `Lahmen` package.
 
 ```{r}
+Teams
+```
+
+```{r tibble}
 teams <- as_tibble(Teams)
 ```
 
-Take a `glimpse()` at `teams`.
+Take a `glimpse()` at `teams`. 
 
 ```{r}
 glimpse(teams)
