@@ -5,8 +5,10 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of the workshop is to introduce some basics of R, data wrangling
-with `dplyr`, and data visualization with `ggplot2`. All of this is done
+## Goals
+
+The goal of the workshop is to introduce git, RStudio, and some basics of R. If we have time we will also cover
+data wrangling with `dplyr`, and data visualization with `ggplot2`. All of this is done
 through the use of baseball data from package `Lahman`.
 
 ## Getting started
