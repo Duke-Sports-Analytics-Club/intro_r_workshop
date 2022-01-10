@@ -153,6 +153,15 @@ numbers <- as.numeric(bad)
 
 There are other ones such as as.factor() and as.character().
 
+### Try it yourself 1 
+
+1. Create a vector with the names of your family members called 'family'. 
+
+2. Create a vector with the ages of your family members called 'family_ages'
+
+3. What is the average age of your family members?
+
+4. Index to the 2nd to last person in your family names vector. Who is it?
 
 ## Data Frames
 
@@ -230,10 +239,30 @@ median(mtcars$mpg)
 sd(mtcars$mpg)
 ```
 
+How many unique values of cylinder of cars in the dataset? 
+
+```{r unique}
+unique(mtcars$cyl)
+```
+
+
 The summary function gives a quick overview containing the min,max,median,mean,IQR of each column.
 ```{r all-sum}
 summary(mtcars)
 ```
+
+
+### Try it yourself 2
+
+Using the dataframe teams loaded in already from earlier, xomplete the following exercises.
+
+4. How many rows are in the dataframe? 
+
+5. How many years does this dataset cover?
+
+6. What is the highest value in the column `attendance` ? What is the type of the column?
+
+
 
 
 ## Simple Data Wrangling
