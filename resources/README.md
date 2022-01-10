@@ -23,6 +23,8 @@ R for Data Science does require some basic knowledge of R.
 For this first class, I would recommend reading R Cookbook 1.6 - 1.12 as well as
 2.1 - 2.6. From R for Data Science, read 2-5, and 10-12. 
 
+Dataframe Operations - [link](https://www.geeksforgeeks.org/dataframe-operations-in-r/?ref=lbp)
+
 Want to further your understanding of some of the functions used in the
 analysis? Check out the below resources on `dplyr` and `ggplot2`.
 
