@@ -44,13 +44,14 @@ Commenting your code can be done by using a #, you will see the text turn green 
 A vector is the basic building block in R. 
 
 ```{r vectors}
-c(4, 1, 0)
-c("intro", "to", "r")
-c(pi, 5 / 2, 6 * 4, -3)
+c(TRUE, FALSE, TRUE) #logical
+c(4, 1, 0) #integer
+c(pi, 5 / 2, 6 * 4, -3) #double/numeric
+c("intro", "to", "r") #character
 ```
 
 The four main vector types you will work with are `logical`, `integer`,
-`double`, and `character`.
+`double`, and `character`. 
 
 Some vector properties:
 
@@ -93,6 +94,14 @@ v*2 + mean(w)
 (w - mean(w)) / sd(w) # z scores
 ```
 
+Adding elements
+
+```{r adding elements}
+names <- c("sean", "ben")
+names <- c(names, "jack")
+```
+
+
 
 ### Data frames (tibbles)
 
@@ -103,10 +112,6 @@ and visualization.
 `mtcars` is the name of the dataframe/tibble. Simply writing it in a code chunk will display it. 
 ```{r cars}
 mtcars
-```
-
-```{r storms}
-storms
 ```
 
 A tibble is a nicer form of a data frame, so generally we will coerce data
@@ -133,14 +138,39 @@ total
 coin_tosses
 ```
 
-## Data wrangling
+### Casting
 
-The `dplyr` package is a package in `tidyverse` that is great for data
-wrangling data frame objects. 
+Sometimes we need to change the typing of a variable. Remember there are 4 main data types: 
+integer, character, numeric, logical. 
+
+For example, often a number is cast as a character originally
+
+```{r}
+bad <- c("3","2", "8")
+
+numbers <- as.numeric(bad)
+```
+
+There are other ones such as as.factor() and as.character().
+
+
+## Data Frames
+
+Data frames are essentially objects in R to store tabular data, like an excel sheet.
+
+We can construct a dataframe from vectors. 
+
+```{r creating-df}
+
+df = data.frame(names,numbers) #columns of vectors go into this function
+view(df)
+```
+
 
 We'll work with some baseball data from the `Lahmen` package.
 
-```{r}
+Notice how you can see each column header and the <type>. 
+```{r display-table}
 Teams
 ```
 
@@ -150,14 +180,65 @@ teams <- as_tibble(Teams)
 
 Take a `glimpse()` at `teams`. 
 
-```{r}
+```{r glimpse}
 glimpse(teams)
 ```
+
+
+### NA Values
+
+Lets look at missing values and how to detect them
+
+```{r na-vals}
+anyNA(teams$yearID)
+filtered <- na.omit(teams) #removes rows with any NA values in any columns
+```
+
 
 To do further manipulations we need to introduce the pipe operator - `%>%`.
 This operator takes the object on the left-hand-side and passes it into
 the object on the right-hand-side. Rather than write `f(x, y)` one could
 write `x %>% f(y)`.
+
+
+## Summary Statistics
+
+Lets now go over ways to get some common summary statistics for dataframes. 
+
+Some essential things you need to understand about each dataframe:
+- What does each row represent?
+- What does each column represent?
+- Can we find the center and spread of a column? 
+
+Number of rows, number of columns
+
+```{r rows and columns}
+nrow(mtcars) #mtcars is a built in dataset
+ncol(mtcars)
+length(mtcars)
+```
+
+Lets try to see the mean + median mpg of the cars in the dataset
+
+We need to use the `$` key to denote which column. 
+Applying a function to a column always take the form of:
+function(dataframe$column)
+
+```{r meanmed}
+mean(mtcars$mpg)
+median(mtcars$mpg)
+sd(mtcars$mpg)
+```
+
+The summary function gives a quick overview containing the min,max,median,mean,IQR of each column.
+```{r all-sum}
+summary(mtcars)
+```
+
+
+## Simple Data Wrangling
+
+If we have time - sneak peek into some easy data wrangling. 
 
 ### Select
 
