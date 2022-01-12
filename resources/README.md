@@ -25,6 +25,7 @@ For this first class, I would recommend reading R Cookbook 1.6 - 1.12 as well as
 
 - [Dataframe Operations](https://www.geeksforgeeks.org/dataframe-operations-in-r/?ref=lbp)
 - [Website](https://cengel.github.io/R-intro/)
+- [Slides from STA323](https://sta323-sp22.github.io/slides/Lec02.pdf)
 
 Want to further your understanding of some of the functions used in the
 analysis? Check out the below resources on `dplyr` and `ggplot2`.
