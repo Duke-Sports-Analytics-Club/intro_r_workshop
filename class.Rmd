@@ -43,6 +43,8 @@ Commenting your code can be done by using a #, you will see the text turn green 
 
 A vector is the basic building block in R. 
 
+the c() stands for concatenate. 
+
 ```{r vectors}
 c(TRUE, FALSE, TRUE) #logical
 c(4, 1, 0) #integer
