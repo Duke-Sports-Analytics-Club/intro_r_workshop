@@ -39,6 +39,6 @@ analysis? Check out the below resources on `dplyr` and `ggplot2`.
 #### `ggplot2` resources
 
 - [Website](https://ggplot2.tidyverse.org)
-- [Cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf)
+- [Cheatsheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)
 
 
