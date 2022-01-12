@@ -53,7 +53,9 @@ c("intro", "to", "r") #character
 ```
 
 The four main vector types you will work with are `logical`, `integer`,
-`double`, and `character`. Each element in a vector should be of the same type.
+`double`, and `character`. Each element in a vector should be of the same type or
+we can run into trouble. R will automatically coerce (force) a type into another type if 
+conflict arises. 
 
 Some vector properties:
 
