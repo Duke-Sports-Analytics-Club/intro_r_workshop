@@ -32,7 +32,7 @@ analysis? Check out the below resources on `dplyr` and `ggplot2`.
 #### `dplyr` resources
 
 - [Website](https://dplyr.tidyverse.org)
-- [Cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
+- [Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 #### `ggplot2` resources
 
