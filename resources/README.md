@@ -23,7 +23,9 @@ R for Data Science does require some basic knowledge of R.
 For this first class, I would recommend reading R Cookbook 1.6 - 1.12 as well as
 2.1 - 2.6. From R for Data Science, read 2-5, and 10-12. 
 
-Dataframe Operations - [link](https://www.geeksforgeeks.org/dataframe-operations-in-r/?ref=lbp)
+- [Dataframe Operations](https://www.geeksforgeeks.org/dataframe-operations-in-r/?ref=lbp)
+- [Website](https://cengel.github.io/R-intro/)
+- [Slides from STA323](https://sta323-sp22.github.io/slides/Lec02.pdf)
 
 Want to further your understanding of some of the functions used in the
 analysis? Check out the below resources on `dplyr` and `ggplot2`.
@@ -32,7 +34,7 @@ analysis? Check out the below resources on `dplyr` and `ggplot2`.
 #### `dplyr` resources
 
 - [Website](https://dplyr.tidyverse.org)
-- [Cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
+- [Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 #### `ggplot2` resources
 
