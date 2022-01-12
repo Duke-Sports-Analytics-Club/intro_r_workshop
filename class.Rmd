@@ -53,7 +53,7 @@ c("intro", "to", "r") #character
 ```
 
 The four main vector types you will work with are `logical`, `integer`,
-`double`, and `character`. 
+`double`, and `character`. Each element in a vector should be of the same type.
 
 Some vector properties:
 
