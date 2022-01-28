@@ -11,6 +11,8 @@ The goal of the workshop is to introduce git, RStudio, and some basics of R. If 
 data wrangling with `dplyr`, and data visualization with `ggplot2`. All of this is done
 through the use of baseball data from package `Lahman`.
 
+## Class recording
+https://duke.zoom.us/rec/share/Vy3r4xb9dMdVSqZmcIuzTmz4Bg3473Sj_HIXPd2wGEj10RW_yl4mpgqMiBHQOImO.LIlQtOpboHMV96RP?startTime=1643332043000 
 ## Getting started
 
 Downloading R, git, and RStudio
